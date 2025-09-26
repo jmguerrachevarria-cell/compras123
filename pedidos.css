@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #0052cc;
+    letter-spacing: 1.2px;
+}
+
+/* Contenedor del formulario */
+main {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #0052cc;
+    margin-bottom: 0.4rem;
+}
+
+/* Inputs, selects y textarea */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 0.6rem 1rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Enfocar campos */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #0052cc;
+    box-shadow: 0 0 8px rgba(0, 82, 204, 0.4);
+    outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+    background-color: #0052cc;
+    color: white;
+    font-weight: 700;
+    padding: 0.85rem 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #003a99;
+    box-shadow: 0 4px 15px rgba(0, 58, 153, 0.6);
+    outline: none;
+}
+
+/* Responsive: para pantallas pequeñas */
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem 1.5rem;
+        max-width: 100%;
+    }
+}

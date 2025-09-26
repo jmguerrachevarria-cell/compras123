@@ -1,0 +1,248 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: #0052cc;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ffd700;
+    outline: none;
+}
+
+/* Main - estructura de tarjetas */
+.padre {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hijo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nieto {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.nieto:hover,
+.nieto:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.nieto h2 {
+    margin-bottom: 1rem;
+    color: #0052cc;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.nieto img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nieto p {
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* Sección redes sociales */
+.social {
+    margin: 3rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.social h2 {
+    margin-bottom: 1.5rem;
+    color: #222;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.social a {
+    display: inline-block;
+    margin: 0 0.6rem;
+    font-size: 2.5rem;
+    color: #666;
+    transition: color 0.3s ease, transform 0.3s ease;
+    outline-offset: 4px;
+}
+
+.social a:hover,
+.social a:focus {
+    color: #0052cc;
+    transform: scale(1.2);
+    outline: none;
+}
+
+/* Colores específicos para cada red social */
+.social a.facebook { color: #3b5998; }
+.social a.instagram { color: #e4405f; }
+.social a.twitter { color: #1da1f2; }
+.social a.youtube { color: #ff0000; }
+.social a.whatsapp { color: #25d366; }
+.social a.discord { color: #7289da; }
+.social a.steam { color: #171a21; }
+.social a.linkedin { color: #0077b5; }
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+    }
+    .hijo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nieto {
+        max-width: 100%;
+    }
+}
+/* Secciones informativas (Quiénes Somos, Visión, Misión) */
+.info-section {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #0052cc;
+    transition: all 0.3s ease;
+}
+
+.info-section:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+/* Estilo para el título principal (desde el <header>) */
+header h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Párrafos dentro de las secciones */
+.info-section p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* Puedes usar <h2> o <strong> dentro del párrafo para resaltar */
+.info-section h2, .info-section strong {
+    color: #0052cc;
+    font-weight: bold;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-section {
+        padding: 1.8rem 1.2rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .info-section p {
+        font-size: 1.05rem;
+    }
+}
+
+.btn-container {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #0052cc;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,82,204,0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-back:focus {
+  background-color: #003d99;
+  box-shadow: 0 6px 14px rgba(0,61,153,0.5);
+  outline: none;
+}
+.info-image {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
